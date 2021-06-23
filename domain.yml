@@ -1,0 +1,48 @@
+version: "2.0"
+
+intents:
+  - bonjour
+  - aurevoir
+  - ouvrir
+  - rechercher
+  - alame
+  - meteo
+  - naviguer
+
+entities:
+  - PERSON
+  - ORG
+  - LOCATION
+  - MISC
+
+responses:
+  rep_bonjour:
+    - text: "Hey! How are you?"
+  rep_aide:
+    - text: "Comment puis-je vous aider ?"
+  rep_aurevoir:
+    - text: "Bonne journée"
+  rep_ouvrir:
+    - text: "Trés bien, j'ouvre"
+  rep_rechercher:
+    - text: "Voici les résultats de votre recherche"
+  rep_alarme:
+    - text: "Alarme programmée"
+  rep_meteo:
+    - text: "Voici la météo"
+  rep_naviguer:
+    - text: "Itinéraire au point"
+
+actions:
+  - rep_bonjour
+  - rep_aide
+  - rep_aurevoir
+  - rep_ouvrir
+  - rep_rechercher
+  - rep_alarme
+  - rep_meteo
+  - rep_naviguer
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

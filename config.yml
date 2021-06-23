@@ -1,0 +1,35 @@
+language: fr
+pipeline:
+  - name: "SpacyNLP"
+    model: "fr_dep_news_trf"
+    case_sensitive: True
+  - name: "SpacyTokenizer"
+    intent_tokenization_flag: True
+    intent_split_symbol: "_"
+    token_pattern: None
+  - name: "SpacyFeaturizer"
+    pooling: "max"
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: word
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    entity_recognition: False
+    epochs: 100
+    constrain_similarities: True
+  - name: "SpacyEntityExtractor"
+    dimensions: []
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+policies:
+  - name: TEDPolicy
+    epochs: 200
+    max_history: 8
+    split_entities_by_comma: True
+  - name: "MemoizationPolicy"
+    max_history: 3

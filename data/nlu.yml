@@ -1,0 +1,51 @@
+version: "2.0"
+
+nlu:
+- intent: bonjour
+  examples: |
+    - hey
+    - salut
+    - hi
+    - coucou
+    - bonjour
+    - bonsoir
+    - yo
+
+- intent: aurevoir
+  examples: |
+    - bye
+    - aurevoir
+    - a plus
+    - bonne nuit
+    - a demain
+    - passe une bonne journée
+
+- intent: ouvrir
+  examples: |
+    - ouvre
+    - lance
+- intent: rechercher
+  examples: |
+    - que veut dire
+    - recherche
+    - que signifie
+- intent: alame
+  examples: |
+    - créé une alarme
+    - défini une alarme
+    - nouvelle alarme
+- intent: meteo
+  examples: |
+    - quel temps fait il
+    - quel temps fait il
+    - est-ce qu'il pleut
+    - pleut il
+    - il fait beau
+- intent: naviguer
+  examples: |
+    - où suis je
+    - comment se rendre
+    - comment aller
+    - itineraire jusque
+    - rentrer chez moi
+    - aller à

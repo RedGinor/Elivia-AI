@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+#- rule: Regle aurevoir
+#  steps:
+#  - intent: aurevoir
+#  - action: rep_aurevoir
+#
+#- rule: Repondre bonjour
+#  steps:
+#  - intent: bonjour
+#  - action: rep_bonjour
