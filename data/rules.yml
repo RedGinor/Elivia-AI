@@ -2,12 +2,52 @@ version: "2.0"
 
 rules:
 
-#- rule: Regle aurevoir
-#  steps:
-#  - intent: aurevoir
-#  - action: rep_aurevoir
-#
-#- rule: Repondre bonjour
+- rule: répondre aurevoir quand l'utilisateur quite
+  steps:
+  - intent: aurevoir
+  - action: utter_aurevoir
+- rule: donner la meteo
+  steps:
+  - intent: meteo
+  - action: utter_meteo
+- rule: definir une alarme
+  steps:
+  - intent: alarme
+  - action: utter_alarme
+- rule: definir un itinéraire
+  steps:
+  - intent: naviguer
+  - action: utter_naviguer
+- rule: ouvrir l'application demandée
+  steps:
+  - intent: ouvrir
+  - action: utter_ouvrir
+- rule: effectuer une recherche
+  steps:
+  - intent: rechercher
+  - action: utter_rechercher
+- rule: jouer un album demandé
+  steps:
+  - intent: musique
+  - action: utter_musique
+- rule: appeller une personne
+  steps:
+  - intent: appel
+  - action: utter_appel
+- rule: envoyer un message
+  steps:
+  - intent: message
+  - action: utter_message
+- rule: faire du sport
+  steps:
+  - intent: sport
+  - action: utter_sport
+- rule: demander comment se rendre utile
+  steps:
+  - intent: humeur
+  - action: utter_aide
+
+#- rule: répondre bonjour
 #  steps:
 #  - intent: bonjour
 #  - action: rep_bonjour

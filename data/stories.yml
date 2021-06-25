@@ -1,13 +1,13 @@
 version: "2.0"
 
 stories:
-- story: proposer son aide a l'utilisateur
+- story: proposer son aide à l'utilisateur
   steps:
   - intent: bonjour
-  - action: rep_bonjour
-  - action: rep_aide
+  - action: utter_bonjour
+  - action: utter_aide
 
-- story: dire aurevoir en partant
-  steps:
-  - intent: aurevoir
-  - action: rep_aurevoir
+#- story: dire aurevoir en partant
+#  steps:
+#  - intent: aurevoir
+#  - action: rep_aurevoir

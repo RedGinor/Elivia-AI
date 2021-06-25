@@ -10,7 +10,18 @@ nlu:
     - bonjour
     - bonsoir
     - yo
-
+    - comment ça va
+- intent: humeur
+  examples: |
+    - je vais bien et toi ?
+    - ça va bien
+    - tout vas bien
+    - je suis triste
+    - je me sens mal
+    - pas au top
+    - déprimé
+    - je suis triste
+    - récomforte moi
 - intent: aurevoir
   examples: |
     - bye
@@ -19,33 +30,56 @@ nlu:
     - bonne nuit
     - a demain
     - passe une bonne journée
-
+    - adieux
 - intent: ouvrir
   examples: |
-    - ouvre
-    - lance
+    - ouvre [YouTube]{"entity": "ORG"}
+    - lance [Météo]{"entity": "ORG"}
 - intent: rechercher
   examples: |
     - que veut dire
     - recherche
     - que signifie
+    - trouve la définition
+    - quelle est la définition
 - intent: alame
   examples: |
     - créé une alarme
-    - défini une alarme
+    - définir une alarme
     - nouvelle alarme
 - intent: meteo
   examples: |
-    - quel temps fait il
-    - quel temps fait il
+    - quel temps fait il a [Berlin]{"entity": "LOC"}
+    - quel est la météo de [Paris]{"entity": "LOC"}
     - est-ce qu'il pleut
     - pleut il
     - il fait beau
 - intent: naviguer
   examples: |
     - où suis je
-    - comment se rendre
-    - comment aller
-    - itineraire jusque
+    - comment se rendre à [Marseille]{"entity": "LOC"}
+    - comment aller à [Londres]{"entity": "LOC"}
+    - itineraire jusque [Singapour]{"entity": "LOC"}
     - rentrer chez moi
-    - aller à
+    - aller à [Dubai]{"entity": "LOC"}
+- intent: appel
+  examples: |
+    - appelle [Valerie]{"entity": "PER"}
+    - passe un coup de fil à [Nathan]{"entity": "PER"}
+    - appelle quelqu'un
+- intent: message
+  examples: |
+    - envoie un message à [Matéo]{"entity": "PER"}
+    - envoie ... à [Tom]{"entity": "PER"}
+    - envoie ...
+- intent: sport
+  examples: |
+    - fitness
+    - lance mon parcours de sport
+    - commence une séssion de sport
+- intent: musique
+  examples: |
+    - lance [Back in Black]{"entity": "MISC"} du groupe [ACDC]{"entity": "PER"}
+    - joue ma playlist [Chill]{"entity": "MISC"}
+    - joue une playlist aléatoire
+    - lance un morceau des [Blues Brothers]{"entity": "PER"}
